@@ -50,3 +50,11 @@ print(predictions)
 pred=reg.score(x_test,y_test)*100 # Predict the regression score
 print(pred) 
 
+# The coefficients
+print('Coefficients: \n', reg.coef_)
+# The mean squared error
+print("Mean squared error: %.2f"
+      % mean_squared_error(y_test,predictions))
+# Explained variance score: 1 is perfect prediction
+print('Variance score: %.2f' % r2_score(y_test,predictions))
+
